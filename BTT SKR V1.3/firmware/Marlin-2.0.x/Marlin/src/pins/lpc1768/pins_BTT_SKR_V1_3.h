@@ -218,7 +218,7 @@
 
   #if ENABLED(ANET_FULL_GRAPHICS_LCD)
 
-    #error "CAUTION! ANET_FULL_GRAPHICS_LCD requires wiring modifications. See 'pins_BTT_SKR_V1_3.h' for details. Comment out this line to continue."
+    //#error "CAUTION! ANET_FULL_GRAPHICS_LCD requires wiring modifications. See 'pins_BTT_SKR_V1_3.h' for details. Comment out this line to continue."
 
    /**
     * 1. Cut the tab off the LCD connector so it can be plugged into the "EXP1" connector the other way.
@@ -241,14 +241,14 @@
     *                   LCD                             LCD
     */
 
-    #define LCD_PINS_RS             EXPA1_03_PIN
+    #define LCD_PINS_RS             P1_19
 
-    #define BTN_EN1                 EXPA1_06_PIN
-    #define BTN_EN2                 EXPA1_04_PIN
-    #define BTN_ENC                 EXPA1_08_PIN
+    #define BTN_EN1                 P3_26
+    #define BTN_EN2                 P3_25
+    #define BTN_ENC                 P1_30
 
-    #define LCD_PINS_ENABLE         EXPA1_05_PIN
-    #define LCD_PINS_D4             EXPA1_07_PIN
+    #define LCD_PINS_ENABLE         P0_18
+    #define LCD_PINS_D4             P0_15
 
   #elif ENABLED(CR10_STOCKDISPLAY)
 
@@ -357,7 +357,7 @@
 //
 
 #ifndef SDCARD_CONNECTION
-  #define SDCARD_CONNECTION                  LCD
+  #define SDCARD_CONNECTION                  ONBOARD
 #endif
 
 #if SD_CONNECTION_IS(LCD)

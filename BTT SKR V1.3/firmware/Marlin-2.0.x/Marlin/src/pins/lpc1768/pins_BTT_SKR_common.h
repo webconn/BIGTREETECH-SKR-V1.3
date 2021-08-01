@@ -93,7 +93,7 @@
 // LCD / Controller
 //
 #if HAS_SPI_LCD
-  #define BEEPER_PIN                       P1_30  // (37) not 5V tolerant
+  #define BEEPER_PIN                       P1_31  // (37) not 5V tolerant
 #endif
 
 //
@@ -107,7 +107,7 @@
   #define MOSI_PIN                         P0_18
 #elif SD_CONNECTION_IS(ONBOARD)
   #undef SD_DETECT_PIN
-  #define SD_DETECT_PIN                    P0_27
+  #define SD_DETECT_PIN                    P1_22
   #define SCK_PIN                          P0_07
   #define MISO_PIN                         P0_08
   #define MOSI_PIN                         P0_09
